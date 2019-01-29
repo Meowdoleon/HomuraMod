@@ -9,5 +9,11 @@
   {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
+  },
+
+  "HomuraMod:HeavenBreakerForm":
+  {
+    "NAME": "Heaven Breaker Form",
+    "DESCRIPTION": "The first time you Exhaust 6 Curses in a turn, gain 1 Flight."
   }
 }
