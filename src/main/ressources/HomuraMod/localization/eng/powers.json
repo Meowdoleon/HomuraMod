@@ -1,0 +1,20 @@
+{
+  "HomuraMod:HeavenBreakerForm":
+  {
+    "NAME": "Heaven Breaker Form",
+    "DESCRIPTIONS":
+    [
+      "The first time you #yExhaust #b6 #yCurses in a turn, gain #b1 #yDemon Flight."
+    ]
+  },
+
+  "HomuraMod:DemonFlight":
+  {
+    "NAME": "Demon Flight",
+    "DESCRIPTIONS":
+    [
+      "Receives 50% less attack damage for #b",
+      " turns."
+    ]
+  }
+}
