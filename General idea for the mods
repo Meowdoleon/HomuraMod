@@ -1,0 +1,60 @@
+TEMPLATE (cards)
+
+NAME (Cost) [Type] <Rarity> : effects 
+                            ¶ upgraded effect 
+
+---
+ADDED MECHANICS : 
+  - Delayed blast (status) deals damage equal to status to a random enemy on the begining of the next turn.
+---
+
+COORDINATED BLAST (1) [attack]  <uncommon> : deal 6 twice. Add half unblocked damage to Delayed Blast 
+                                           ¶ deal 7 twice. Add unblocked damage to Delayed Blast
+
+WIDESPREAD DESTRUCTION (1) [Skill] <Uncommon> : Next turn, Delayed Blast affects all enemies. Exhaust.
+                                              ¶ Next turn, Delayed Blast affects all enemies
+
+TIMESAVER (2) [Power] <Rare> : Multi-attacks hit one more time. 
+                             ¶ (1) Innate. Multi-attacks hit one more time.
+
+REWIND (1) [Skill] <Uncommon> : Choose a card from the discard pile. Get a copy of that card in your hand. Your hand is not discarded this turn. Exhaust. 
+                              ¶ Choose a card from the discard pile. Get a copy of that card in your hand. It costs 0 that turn. Your Hand is not discarded this turn. Exhaust. 
+
+RACE THE CLOCK (1) [Skill] <Common> : Draw two cards. Get 5 block per Despair or Curse card drawn this turn.
+                                    ¶ Draw three cards. Get 7 block per Despair or Curse card drawn this turn.
+
+TIME TRIAL (0) [Attack] <Common> : Deal 4 damage. Add 4 Delayed Blast. 
+                                 ¶ Deal 6 damage. Add 4 Delayed Blast. Draw a card. 
+
+THE HOUR IS NIGH (1) [Skill] <Uncommon> : ALL enemies gain Vulnerable 2, Weak 2 and Frail 2. Exhaust.
+                                        ¶ ALL enemies gain Vulnerable 3, Weak 3 and Frail 3. Exhaust.
+
+OPPOSITION (1) [Skill <Common> : Gain 8 block. Discard one card. Next turn, draw one more card.
+                               ¶ Gain 11 block. Discard one card. Next turn, draw two more cards.  
+
+REMEMBERANCE (1) [Skill] <Uncommon> : Gain 7 block. Your hand is not discarded this turn. 
+                                    ¶ Gain 11 block. Your hand is not discarded this turn.
+                                    
+RESOLUTION (3) [Power] <Uncommon> : Curses are now playable. When you play them, exhaust it and draw one more card.  
+                                  ¶ (2) Curses are now playable. When you play them, exhaust it and draw one more card.
+
+DENY FATE (1) [Skill] <Common> : Draw two cards. Discard three cards. Gain 1 energy. 
+                               ¶ Draw two cards. Discard three cards. Gain 1 energy per remaining card in your hand.
+
+CHRONOBLAST (2) [Power] <Rare> : Each time you play a card, add 1 Delayed Blast 
+                               ¶ Each time you play a card, add 1 Delayed Blast and 1 Dodge Next Turn.
+
+SUMMON : NUTCRACKER (X) [Attack] <Common> : Deal 2 damage X times, gain 3 Block X times and add 4 Delayed Blast X times. 
+                                          ¶ Deal 2 daamge X+1 times, gain 3 Block X+1 times and add 4 Delayed Blast X+1 times. 
+                            
+SUMMON : CLARA DOLLS (X) [Skill] <Common> : Gain 6 block X times, plus one block per Despair card in your deck. 
+                                          ¶ Gain 6 block X+1 times, plus two block per Despair card in your deck. Gain 1 Despair.
+
+SUMMON : NUKE (X) [Skill] <Common> : Add 12 Delayed Blast X times.
+                                   ¶ Add 12 Delayed Blast X+1 times.
+
+SUMMON : LILY FIELD (X) [Power] <Rare> : Add X Delayed Blast per Despair card in your deck at the end of each turn. 
+                                        ¶ Add X+1 Delayed Blast per Despair card in your deck at the end of each turn. Gain 1 Despair. 
+
+SUMMON : PETRO-TRUCK (X) [Attack] <Uncommon> : Deal 9X Damage
+                                             ¶ Deal 9(X+1) Damage 
