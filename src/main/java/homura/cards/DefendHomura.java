@@ -33,6 +33,12 @@ public class DefendHomura extends CustomCard
 		this.tags.add(BaseModCardTags.BASIC_DEFEND);
 	}
 
+	@Override
+	public boolean isDefend()
+	{
+		return true;
+	}
+
 	public AbstractCard makeCopy()
 	{
 		return new DefendHomura();

@@ -63,9 +63,9 @@ public class HomuraCharacter extends CustomPlayer
 		initializeClass(null, MY_CHARACTER_SHOULDER_2, /*required call to load textures and setup energy/loadout*/
 				MY_CHARACTER_SHOULDER_1,
 				MY_CHARACTER_CORPSE, 
-				getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
+				getLoadout(), 20.0F, -10.0F, 220.0F, 90.0F, new EnergyManager(ENERGY_PER_TURN));
 
-		float renderscale = 1.2F;
+		float renderscale = 1.8F;
 		loadAnimation(MY_CHARACTER_SKELETON_ATLAS, MY_CHARACTER_SKELETON_JSON, renderscale); // if you're using modified versions of base game animations or made animations in spine make sure to include this bit and the following lines
 		
 		AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);

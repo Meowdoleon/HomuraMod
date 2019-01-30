@@ -2,22 +2,23 @@
 
 package homura.powers;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 
-public class HeavenBreakerFormPower extends AbstractPower implements NonStackablePower
+public class HeavenBreakerFormPower extends AbstractPower
 {
-	private static int nbCurseExhaust = 0;
-
 	private static final String POWER_ID = "HomuraMod:HeavenBreakerForm";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	private static final String NAME = powerStrings.NAME;
@@ -28,7 +29,7 @@ public class HeavenBreakerFormPower extends AbstractPower implements NonStackabl
 		this.name = newName;
 		this.ID = POWER_ID;
 		this.owner = owner;
-		this.amount = -1;
+		this.amount = 0;
 		this.updateDescription();
 		this.type = AbstractPower.PowerType.BUFF;
 		this.isTurnBased = false;
@@ -45,6 +46,12 @@ public class HeavenBreakerFormPower extends AbstractPower implements NonStackabl
 		CardCrawlGame.sound.play("POWER_FLIGHT", 0.3F);
 	}
 
+	@Override
+	public void renderAmount(SpriteBatch sb, float x, float y, Color c)
+	{
+		FontHelper.renderFontRightTopAligned(sb, FontHelper.powerAmountFont, Integer.toString(this.amount), x, y, this.fontScale, c);
+	}
+
 	public void atStartOfTurn()
 	{
 		updateDescription();
@@ -59,9 +66,9 @@ public class HeavenBreakerFormPower extends AbstractPower implements NonStackabl
 	{
 		if(card.type == AbstractCard.CardType.CURSE)
 		{
-			nbCurseExhaust++;
+			this.amount++;
 
-			if(nbCurseExhaust >= 6)
+			if(this.amount == 6)
 			{
 				flash();
 				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner,
@@ -73,9 +80,9 @@ public class HeavenBreakerFormPower extends AbstractPower implements NonStackabl
 	public void atEndOfTurn(boolean isPlayer) {
 		super.atEndOfTurn(isPlayer);
 
-		if(nbCurseExhaust >= 6)
+		if(this.amount >= 6)
 		{
-			nbCurseExhaust = 0;
+			this.amount = 0;
 		}
 	}
 }

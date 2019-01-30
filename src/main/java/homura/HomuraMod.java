@@ -90,6 +90,7 @@ public class HomuraMod implements EditCardsSubscriber, EditCharactersSubscriber,
 	{
 		BaseMod.addCard(new StrikeHomura());
 		BaseMod.addCard(new DefendHomura());
+		BaseMod.addCard(new HeavenBreakerForm());
 	}
 
 

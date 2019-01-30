@@ -32,12 +32,16 @@ public class StrikeHomura extends CustomCard
 		this.tags.add(AbstractCard.CardTags.STRIKE);
 	}
 
+	public boolean isStrike()
+	{
+		return true;
+	}
+
 	public AbstractCard makeCopy()
 	{
 		return new StrikeHomura();
 	}
 
-	@Override
 	public void upgrade()
 	{
 		if (!this.upgraded)
@@ -47,7 +51,6 @@ public class StrikeHomura extends CustomCard
 		}
 	}
 
-	@Override
 	public void use(AbstractPlayer p, AbstractMonster m)
 	{
 		com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
